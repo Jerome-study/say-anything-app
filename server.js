@@ -60,7 +60,7 @@ async function mongoDBServer () {
 
 
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, function () {
+const port = process.env.PORT || 5000
+app.listen(port, function () {
     console.log(`The server is running on port ${PORT}!`)
 })
