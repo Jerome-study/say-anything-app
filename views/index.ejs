@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Say Anything!</h1>
+        </div>
+    </header>
+
+
+
+    <section>
+        <div class="container">
+            <form action="/quotes" method="post">
+                <input type="text" name="name" placeholder="name"/>
+                <input type="text" name="message" placeholder="message"/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="wallMessage">
+                <% for (var i = 0; i < datas.length; i++){ %>
+                    <div class="box">
+                        <form action="" class="box-form">
+                            <input type="text" class="textBox">
+                        </form>
+        
+                        <div class="message"><%= datas[i].message %></div>
+                        <div class="name"><%= datas[i].name %></div>
+                        <button class ="updateBtn"id= <%= `${datas[i]._id}` %>>Update</button>
+                        <button class ="deleteBtn"id= <%= `${datas[i]._id}` %>>Delete</button>
+                    </div>
+            <% } %>
+            </div>
+        </div>
+    </section>
+    
+    <script src="/script.js"> 
+    
+    </script>
+    
+</body>
+</html>
