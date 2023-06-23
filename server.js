@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 
 
 
-const connectionString = process.env.MONGODBURL
+const connectionString = process.env.MONGODBURL 
 mongoDBServer()
 
 async function mongoDBServer () {
@@ -62,5 +62,5 @@ async function mongoDBServer () {
 
 const port = process.env.PORT || 5000
 app.listen(port, function () {
-    console.log(`The server is running on port ${PORT}!`)
+    console.log(`The server is running on port ${port}!`)
 })
