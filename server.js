@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 
 const connectionString = process.env.MONGODBURL 
 
-
+mongoDBServer()
 async function mongoDBServer () {
     try {
         const client = await MongoClient.connect(connectionString, { useUnifiedTopology: true })
@@ -57,7 +57,7 @@ async function mongoDBServer () {
     }
 }
 
-mongoDBServer()
+
 
 
 const port = process.env.PORT || 5000
